@@ -16,7 +16,9 @@
     "prettier-format": "prettier --config .prettierrc 'ts/**/*.tsx' --write",
     "prepare": "husky install",
     "prettier": "prettier '**/*.{js,jsx,ts,tsx}' --write",
-    "lint": "eslint --ext .js,.jsx,.ts,.tsx src --color"
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx src --color",
+    "eslint": "eslint",
+    "lint-staged": "lint-staged"
   },
   "husky": {
     "hooks": {
@@ -26,7 +28,7 @@
   "lint-staged": {
     "ts/**/*.{ts,tsx,js,jsx}": [
       "yarn run prettier",
-      "yarn run lint"
+      "yarn run eslint --fix"
     ]
   },
   "dependencies": {
