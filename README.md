@@ -1,6 +1,6 @@
 # empty-project
 
-Empty project.
+ecommerce.
 
 ## Building and running on localhost
 
@@ -39,7 +39,3 @@ To run cypress:
 ```sh
 npm cypress:open
 ```
-
-## Credits
-
-Made with [createapp.dev](https://createapp.dev/)
