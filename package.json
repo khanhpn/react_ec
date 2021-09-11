@@ -13,7 +13,8 @@
     "test": "jest",
     "cypress:open": "cypress open",
     "start": "webpack serve --hot --mode development",
-    "prettier-format": "prettier --config .prettierrc 'ts/**/*.ts' --write"
+    "prettier-format": "prettier --config .prettierrc 'ts/**/*.ts' --write",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@material-ui/core": "^4.12.3",
