@@ -13,8 +13,21 @@
     "test": "jest",
     "cypress:open": "cypress open",
     "start": "webpack serve --hot --mode development",
-    "prettier-format": "prettier --config .prettierrc 'ts/**/*.ts' --write",
-    "prepare": "husky install"
+    "prettier-format": "prettier --config .prettierrc 'ts/**/*.tsx' --write",
+    "prepare": "husky install",
+    "prettier": "prettier '**/*.{js,jsx,ts,tsx}' --write",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx src --color"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "ts/**/*.{ts,tsx,js,jsx}": [
+      "yarn run prettier",
+      "yarn run lint"
+    ]
   },
   "dependencies": {
     "@material-ui/core": "^4.12.3",
