@@ -1,12 +1,17 @@
 import { FC } from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import {arrT, makeArr, test1} from './lib/index';
 
 interface Props {
-  name: string;
+  name?: string;
   age?: number;
 }
 
 const App: FC<Props> = () => {
+  console.log(arrT([1,2]));
+  console.log(makeArr("1"));
+  console.log(makeArr(2));
+
+  console.log(test1(1, "2"));
   return <div>test</div>;
 };
 
